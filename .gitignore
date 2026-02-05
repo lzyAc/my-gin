@@ -1,0 +1,15 @@
+# 编译产物
+my-gin
+*.exe
+*.log
+*.pid
+
+# Go 相关
+vendor/
+*.test
+*.out
+
+# IDE
+.idea/
+.vscode/
+*.swp
