@@ -13,14 +13,12 @@ type Modules struct {
 
 // InitModules 初始化各模块，返回 Modules
 func InitModules() *Modules {
-    // 1初始化 repo
+    // 初始化 repo和构建 service
     repo := &userRepo.UserRepo{}
-
-    // 2 构建 service
-    svc := &userApp.UserService{Repo: repo}
+    userSvc := &userApp.UserService{Repo: repo}
 
     // 3 返回模块集合
     return &Modules{
-        UserService: svc,
+        UserService: userSvc,
     }
 }
