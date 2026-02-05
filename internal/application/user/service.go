@@ -24,3 +24,8 @@ func (s *UserService) Login(username, password string) (bool, error) {
     }
     return u.Password == password, nil
 }
+
+// 可选测试方法
+func (s *UserService) TestInfo() (*entity.User, error) {
+    return s.Repo.TestInfo()
+}

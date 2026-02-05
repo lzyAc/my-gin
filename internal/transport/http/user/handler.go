@@ -4,6 +4,7 @@ import (
     "github.com/gin-gonic/gin"
     "MxiqiGo/internal/application/user"
     "net/http"
+    "MxiqiGo/internal/infrastructure/logger"
 )
 
 func RegisterRoutes(r *gin.Engine, svc *user.UserService) {
@@ -41,11 +42,16 @@ func RegisterRoutes(r *gin.Engine, svc *user.UserService) {
     })
 
     r.GET("/user/info", func(c *gin.Context) {
-        // 这里可以从 service 或 session 获取用户信息
-        // 为测试方便，先返回固定数据
+        userInfo, err := svc.TestInfo() // 未来可以替换为真实 Service 获取
+        if err != nil {
+            c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+            return
+        }
+        logger.Write("user","测试全流程到db",userInfo)
         c.JSON(http.StatusOK, gin.H{
-            "username": "liziyue",
-            "role":     "admin",
+            "id":       userInfo.ID,
+            "username": userInfo.Username,
+            "role":     "admin", // 可以扩展为实际角色
         })
     })
 }

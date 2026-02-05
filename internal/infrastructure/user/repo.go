@@ -30,3 +30,10 @@ func (r *UserRepo) GetByUsername(username string) (*entity.User, error) {
         Password: u.Password,
     }, nil
 }
+
+func (r *UserRepo) TestInfo() (*entity.User, error) {
+    return &entity.User{
+        ID:       1,
+        Username: "liziyue",
+    }, nil
+}

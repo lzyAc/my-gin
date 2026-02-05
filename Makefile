@@ -23,7 +23,7 @@ build:
 	@$(GO_CMD) build -o $(APP_NAME) $(SRC_FILE)
 	@echo "✅ Build finished"
 
-start: build
+start: stop build
 	@echo "🚀 Starting $(APP_NAME) in background..."
 	@bash -c 'nohup ./$(APP_NAME) > ./log/app.log 2>&1 & echo $$! > $(PID_FILE)'
 	@echo "✅ Started with PID `cat $(PID_FILE)`"
