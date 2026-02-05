@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: my_gin_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: gin123
+      MYSQL_DATABASE: my_gin
+      MYSQL_USER: my_gin
+      MYSQL_PASSWORD: gin123
+    ports:
+      - "3306:3306"  # 本地访问
+    volumes:
+      - mysql_data:/var/lib/mysql       # 数据持久化
+      - ./internal/infrastructure/persistence/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    restart: unless-stopped
+  grpc_service:
+    build: ./cmd/grpc
+    ports:
+      - "50051:50051"
+  gateway:
+    build: ./cmd/gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - http_service
+      - grpc_service
+volumes:
+  mysql_data:
+
