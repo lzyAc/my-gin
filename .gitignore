@@ -13,3 +13,6 @@ vendor/
 .idea/
 .vscode/
 *.swp
+
+#日志
+log/
