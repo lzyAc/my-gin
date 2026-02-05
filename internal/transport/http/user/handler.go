@@ -4,7 +4,7 @@ import (
     "github.com/gin-gonic/gin"
     "MxiqiGo/internal/application/user"
     "net/http"
-    "MxiqiGo/internal/infrastructure/logger"
+    "MxiqiGo/pkg/logger"
 )
 
 func RegisterRoutes(r *gin.Engine, svc *user.UserService) {
