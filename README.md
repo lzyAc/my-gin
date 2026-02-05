@@ -37,7 +37,7 @@ my-gin/
 ├── cmd/                # 启动入口
 │   ├── http/           # HTTP 服务
 │   │   ├── main.go     # 程序启动
-│   │   └── route.go    # 路由注册
+│   │   └── route.go    # 路由注册（迁移到transport/http中去了）
 │   └── grpc/           # gRPC 服务入口
 ├── internal/           # 核心业务
 │   ├── application/    # 应用服务层
