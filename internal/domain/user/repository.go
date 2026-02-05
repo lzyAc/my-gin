@@ -1,6 +1,6 @@
 package user
 
-import "my-gin/internal/domain/user/entity"
+import "MxiqiGo/internal/domain/user/entity"
 
 type UserRepository interface {
     Create(user *entity.User) error

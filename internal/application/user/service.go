@@ -1,8 +1,8 @@
 package user
 
 import (
-    "my-gin/internal/domain/user/entity"
-    userRepo "my-gin/internal/domain/user"
+    "MxiqiGo/internal/domain/user/entity"
+    userRepo "MxiqiGo/internal/domain/user"
 )
 
 type UserService struct {

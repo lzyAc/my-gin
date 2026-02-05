@@ -2,9 +2,9 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
-    db "my-gin/internal/infrastructure/db"
-    infra "my-gin/internal/infrastructure"
-    httpTransport "my-gin/internal/transport/http"
+    db "MxiqiGo/internal/infrastructure/db"
+    infra "MxiqiGo/internal/infrastructure"
+    httpTransport "MxiqiGo/internal/transport/http"
 )
 
 func main() {

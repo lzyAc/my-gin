@@ -2,9 +2,9 @@ package http
 
 import (
     "github.com/gin-gonic/gin"
-    infra "my-gin/internal/infrastructure"
-    userTransport "my-gin/internal/transport/http/user"
-    // orgTransport "my-gin/internal/transport/http/org" // 未来扩展
+    infra "MxiqiGo/internal/infrastructure"
+    userTransport "MxiqiGo/internal/transport/http/user"
+    // orgTransport "MxiqiGo/internal/transport/http/org" // 未来扩展
 )
 
 

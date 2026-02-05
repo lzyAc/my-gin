@@ -3,7 +3,7 @@ package main
 import (
     "github.com/gin-gonic/gin"
     "net/http"
-    "my-gin/internal/pkg/jwt"
+    "MxiqiGo/internal/pkg/jwt"
 )
 
 func JWTMiddleware() gin.HandlerFunc {

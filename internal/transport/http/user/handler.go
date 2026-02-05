@@ -2,7 +2,7 @@ package user
 
 import (
     "github.com/gin-gonic/gin"
-    "my-gin/internal/application/user"
+    "MxiqiGo/internal/application/user"
     "net/http"
 )
 

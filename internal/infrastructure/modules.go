@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-    userApp "my-gin/internal/application/user"
-    userRepo "my-gin/internal/infrastructure/user"
+    userApp "MxiqiGo/internal/application/user"
+    userRepo "MxiqiGo/internal/infrastructure/user"
 )
 
 // Modules 保存模块的 service 实例

@@ -1,9 +1,9 @@
 package user
 
 import (
-    "my-gin/internal/domain/user/entity"
-    "my-gin/internal/infrastructure/db"
-    userModeldb "my-gin/internal/infrastructure/user/db"
+    "MxiqiGo/internal/domain/user/entity"
+    "MxiqiGo/internal/infrastructure/db"
+    userModeldb "MxiqiGo/internal/infrastructure/user/db"
 )
 
 type UserRepo struct{}
