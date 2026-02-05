@@ -13,14 +13,17 @@ func (r *UserRepo) Create(user *entity.User) error {
         Username: user.Username,
         Password: user.Password,
     }
-    return db.DB.Create(&u).Error
+    return db.UserDB.Create(&u).Error
 }
 
 func (r *UserRepo) GetByUsername(username string) (*entity.User, error) {
     var u userModeldb.UserModel
-    if err := db.DB.Where("username = ?", username).First(&u).Error; err != nil {
+    if err := db.UserDB.
+        Where("username = ?", username).
+        First(&u).Error; err != nil {
         return nil, err
     }
+
     return &entity.User{
         ID:       u.ID,
         Username: u.Username,
