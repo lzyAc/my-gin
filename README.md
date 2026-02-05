@@ -38,7 +38,7 @@ my-gin/
 │   ├── http/           # HTTP 服务
 │   │   ├── main.go     # 程序启动
 │   │   └── route.go    # 路由注册（迁移到transport/http中去了）
-│   └── grpc/           # gRPC 服务入口
+│   └── grpc/           # gRPC 服务入口（类似于http这样去操作，增加一个proto文件夹）
 ├── internal/           # 核心业务
 │   ├── application/    # 应用服务层
 │   │   ├── user/       # 用户业务 Service
